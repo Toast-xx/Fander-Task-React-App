@@ -1,0 +1,31 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px; /* Optional padding for container */
+}
+
+.register-container input {
+  margin-bottom: 10px;
+  padding: 10px; /* Optional for better input appearance */
+  border: 1px solid #ccc; /* Optional border styling */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+.register-container button {
+  margin-top: 10px;
+  background-color: #4caf50;
+  padding: 10px 20px; /* Added padding */
+  border-radius: 5px; /* Round corners */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+}
+
+.register-container .link {
+  margin-top: 15px;
+}
+
+.register-container .link a {
+  color: #4caf50;
+  text-decoration: none; /* Optional to remove underline */
+}

@@ -1,0 +1,242 @@
+/* Global Styles */
+:root {
+  --primary-color: #5c6bc0;
+  --primary-hover-color: #3f4b8f;
+  --background-color: #f4f7fc;
+  --text-color: #333;
+  --secondary-text-color: #777;
+  --error-color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color); /* Ensure body has background color */
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top of the page */
+  height: 100vh; /* Full height of the viewport */
+  min-height: 100%;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%; /* Full width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top: 80px;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Dropdown Button Styles */
+.menu-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-button:hover {
+  color: var(--primary-hover-color);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  animation: fadeIn 0.3s ease;
+}
+
+.menu-button:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Container for the forms (Login/Register) */
+.container {
+  max-width: 100%;
+  width: 100%;  /* Ensure full width */
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Form Input & Button Styles */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+  border-width: 2px;
+}
+
+input.error {
+  border-color: var(--error-color);
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+  transform: scale(1.05);
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 100%;  /* Ensure full width */
+  position: relative; /* Keep it in normal flow */
+}
+
+.welcome-message {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-message h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

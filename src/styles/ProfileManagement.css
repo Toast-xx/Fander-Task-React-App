@@ -1,0 +1,95 @@
+/* Modal Overlay: Fills the screen with a semi-transparent background */
+.profile-management-container {
+  position: fixed; /* Ensure it stays over other content */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional semi-transparent background */
+  z-index: 1000; /* Place above all other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.profile-management-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%; /* Adjust based on your design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure positioning for close button */
+}
+
+/* Modal Form Styles */
+.profile-management-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-management-modal label {
+  margin-top: 10px;
+}
+
+.profile-management-modal input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Adds space between inputs */
+}
+
+/* Button Container */
+.profile-management-modal .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.profile-management-modal .buttons button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.profile-management-modal .buttons button:last-child {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Button Hover Effects */
+.profile-management-modal .buttons button:first-child:hover {
+  background-color: #45a049;
+}
+
+.profile-management-modal .buttons button:last-child:hover {
+  background-color: #e53935;
+}
+
+/* Input Focus Styles */
+.profile-management-modal input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .profile-management-content {
+    width: 90%; /* Adjust width on small screens */
+  }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+.close-btn:hover {
+  color: #f44336;
+}

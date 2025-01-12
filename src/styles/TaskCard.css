@@ -1,0 +1,71 @@
+.task-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 200px; /* Adjust height as needed */
+}
+
+.task-content {
+  flex-grow: 1; /* Allow content area to grow */
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions .action-separator {
+  margin: 0 8px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.task-actions a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.task-actions a:hover {
+  color: #0056b3;
+}
+
+.complete-checkbox-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.task-actions input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.task-actions input[type="checkbox"]:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.task-actions input[type="checkbox"]:hover {
+  border-color: #007bff;
+}
+
+.task-actions input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
